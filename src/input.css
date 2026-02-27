@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+
+}
+
+@layer components {
+  .link {
+    @apply transition hover:text-gray-200
+  }
+  .hover-link{
+    @apply relative cursor-pointer;
+  }
+  .hover-link::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-yellow-300;
+    @apply transition-transform duration-500 ease-in-out; /* Start hidden, anchored to the right */
+    @apply scale-x-0 origin-right;
+  }
+  .hover-link:hover::after {
+    /* Grow from the left */
+    @apply scale-x-100 origin-left;
+  }
+
+  .odd-grid-display{
+    @apply border border-yellow-300 hover:border-white rounded-xl px-4 py-4 flex flex-col transform hover:scale-105 transition-all hover:shadow-white/25 shadow-md shadow-yellow-300 max-sm:border max-sm:px-2 max-sm:py-2 max-sm:rounded-xl
+  }
+
+  .even-grid-display{
+    @apply border border-white hover:border-yellow-300 rounded-xl px-4 py-4 flex flex-col transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-yellow-300/25 shadow-md shadow-white
+  }
+
+  .bg-image{
+    @apply absolute inset-0 before:content-[''] before:absolute before:inset-0 max-sm:before:bg-[url('/images/grocery-image.png')] before:bg-cover before:bg-center before:opacity-50;
+  }
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/output.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body class="bg-[url('/images/image.png')] bg-no-repeat bg-cover text-white flex flex-col overflow-x-hidden">
+    <main class="px-15 max-sm:px-0">
+      <header class="bg-[url('/images/image.png')] opacity-85 bg-no-repeat bg-cover flex py-4 justify-between items-center w-full sticky px-4 rounded-b-xl z-10 top-0">
+        <div>
+          <img src="/images/logo.svg" alt="logo" class="object-contain w-35 max-sm:w-23">
+        </div>
+        <div class="text-white flex items-center justify-center gap-10 text-lg max-sm:text-[12px] max-sm:gap-4">
+          <a href="index.html" class="link hover-link">Home</a>
+          <a href="store.html" class="link hover-link">Store</a>
+          <a href="#" class="link hover-link">Feature</a>
+          <a href="#" class="link hover-link">Contact</a>
+        </div>
+        <div class="cursor-pointer relative transform hover:scale-120 transition duration-300 ">
+          <img src="/images/cart.svg" alt="cart" class="object-contain h-10 max-sm:h-7">
+          <div class="text-white px-2 py-2 w-6 h-6 font-bold flex justify-center items-center -top-1.25 -right-2.75 bg-red-600 absolute rounded-full max-sm:w-4 max-sm:h-4 max-sm:text-sm max-sm:-top-0.75 max-sm:-right-2">2</div>
+        </div>
+      </header>
+
+      <section class="grid grid-cols-3 my-8 gap-x-8 gap-y-10 max-sm:px-4 items-stretch grow max-sm:grid-cols-1">
+        <!--Grid Layout-->
+        <div class="odd-grid-display" data-aos="fade-down">
+          <!--Image of product-->
+          <img src="/images/meat.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">1Ib of Fresh Meat</h1>
+              <p class="text-md">Cost: $6.60</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">Grocify Farms</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+            <div>
+              <p>Description:</p>
+              <div class="px-2">
+                &#183; Meat gotten from a healthy cow.
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Grid Layout 2-->
+        <div class="even-grid-display" data-aos="fade-down">
+          <!--Image of product-->
+          <img src="/images/bread.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">900g of Fresh Bread</h1>
+              <p class="text-md">Cost: $5.50</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">The Bread Basket</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+            <div>
+              <p>Description:</p>
+              <div class="px-2 flex flex-col justify-center">
+                <p>&#183; Chocolate bread available.</p>
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Grid Layout 3-->
+        <div class="odd-grid-display" data-aos="fade-down">
+          <!--Image of product-->
+          <img src="/images/sardines.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">1Ib of Sardines</h1>
+              <p class="text-md">Cost: $12.00</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">Grocify Farms</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+              <p>Description:</p>
+              <div class="px-2">
+                <p>&#183; 0.5Ib of Sardines also avilable.</p>
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Grid Layout 4-->
+        <div class="even-grid-display" data-aos="fade-right">
+          <!--Image of product-->
+          <img src="/images/vegetable-basket.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">Fresh Vegetables</h1>
+              <p class="text-md">Cost: $6.60</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">Grocify Farms</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+            <div>
+              <p>Description:</p>
+              <div class="px-2">
+                &#183; Meat gotten from a healthy cow.
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Grid Layout 5-->
+        <div class="odd-grid-display" data-aos="fade-right">
+          <!--Image of product-->
+          <img src="/images/potato.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">1Ib Sweet Potato</h1>
+              <p class="text-md">Cost: $6.60</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">Grocify Farms</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+              <p>Description:</p>
+              <div class="px-2">
+                &#183; Meat gotten from a healthy cow.
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Grid Layout 6-->
+        <div class="even-grid-display" data-aos="fade-right">
+          <!--Image of product-->
+          <img src="/images/Bread-2.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">1kg of Sunshine Bread</h1>
+              <p class="text-md">Cost: $6.60</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">Grocify Farms</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+              <p>Description:</p>
+              <div class="px-2">
+                &#183; Meat gotten from a healthy cow.
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Grid Layout 7-->
+        <div class="odd-grid-display" data-aos="fade-left">
+          <!--Image of product-->
+          <img src="/images/full-chicken.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">1Ib of Full Chicken</h1>
+              <p class="text-md">Cost: $6.60</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">Grocify Farms</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+              <p>Description:</p>
+              <div class="px-2">
+                &#183; Meat gotten from a healthy cow.
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Grid Layout 8-->
+        <div class="even-grid-display" data-aos="fade-left">
+          <!--Image of product-->
+          <img src="/images/cauliflower.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">1Ib of Cauiliflower</h1>
+              <p class="text-md">Cost: $6.60</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">Grocify Farms</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+              <p>Description:</p>
+              <div class="px-2">
+                &#183; Meat gotten from a healthy cow.
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Grid Layout 9-->
+        <div class="odd-grid-display" data-aos="fade-left">
+          <!--Image of product-->
+          <img src="/images/onions.jpg" alt="meat" class="aspect-square w-full object-cover rounded-t-lg">
+          <!--Details of product-->
+          <div class="flex flex-col justify-between">
+            <!--Name and cost of product-->
+            <div class="flex justify-between items-center my-2">
+              <h1 class="font-semibold text-2xl cursor-pointer hover:text-slate-300 transition">1Ib of Onion</h1>
+              <p class="text-md">Cost: $6.60</p>
+            </div>
+            <!--More detials of product-->
+            <div class="flex justify-between items-center my-2">
+              <div class="flex flex-col justify-center">
+                <img src="/images/logo.svg" alt="Verified" class="w-16 object-contain mr-1 rounded-full">
+                <h3 class="text-lg font-medium cursor-pointer hover:text-slate-300 transition">Grocify Farms</h3>
+              </div>
+              <div class=" ">
+                <button class="bg-yellow-300 text-black rounded-lg flex items-center font-medium px-2 py-1 hover:cursor-pointer hover:bg-yellow-400 transition ease-in-out">
+                  Add to cart
+                  <img src="/images/shopping-cart.png" alt="" class="w-4">
+                </button>
+              </div>
+            </div>
+            <!--Description-->
+              <p>Description:</p>
+              <div class="px-2">
+                &#183; Meat gotten from a healthy cow.
+                <p class="cursor-pointer hover:underline transition text-slate-400">...Read more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+
+    <footer class="bg-slate-500/20 px-10 py-10 mt-8">
+      <div class="text-2xl font-bold">
+        <p>&copy; Grocify. All Right Reserved.</p>
+      </div>
+    </footer>
+
+    <!--AOS JS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+      // Global settings:
+      duration: 300, //values from 0 to 3000, with step 50ms
+      once: false, // whether animation should happen only once while scrolling down
+      mirror: true, // whether elements should animate out while scrolling past them
+      });
+    </script>
+  </body>
+</html>
