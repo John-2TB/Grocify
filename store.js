@@ -1,25 +1,71 @@
-const page1 = document.getElementById("page1");
-const page2 = document.getElementById("page2");
-const page3 = document.getElementById("page3");
+const pageButtons = [
+  document.getElementById("page1"),
+  document.getElementById("page2"),
+  document.getElementById("page3")
+].filter(Boolean);
 
-page1.style.backgroundColor = "white";
-page1.style.paddingLeft = "8px";
-page1.style.paddingRight = "8px";
-page1.style.color = "black";
-page1.style.borderRadius = "4px";
+const previousButton = document.getElementById("prevPage");
+const nextButton = document.getElementById("nextPage");
 
-page2.addEventListener("click",
-  function() {
-    page2.style.backgroundColor = "white";
-    page2.style.paddingLeft = "8px";
-    page2.style.paddingRight = "8px";
-    page2.style.color = "black";
-    page2.style.borderRadius = "4px";
+const ACTIVE_STYLES = {
+  backgroundColor: "white",
+  color: "black",
+  borderRadius: "4px",
+  paddingLeft: "8px",
+  paddingRight: "8px"
+};
 
-    page1.style.removeProperty(BackgroundColor)
-    page1.style.paddingLeft = "none";
-    page1.style.paddingRight = "none";
-    page1.style.color = "none";
-    page1.style.borderRadius = "none";
+function setButtonActiveState(button, isActive) {
+  if (!button) return;
+
+  if (isActive) {
+    Object.assign(button.style, ACTIVE_STYLES);
+    return;
   }
-);
+
+  button.style.removeProperty("background-color");
+  button.style.removeProperty("color");
+  button.style.removeProperty("border-radius");
+  button.style.removeProperty("padding-left");
+  button.style.removeProperty("padding-right");
+}
+
+function getCurrentPage() {
+  return pageButtons.findIndex((button) => button.dataset.active === "true");
+}
+
+function activatePageByIndex(pageIndex) {
+  if (pageIndex < 0 || pageIndex >= pageButtons.length) {
+    return;
+  }
+
+  pageButtons.forEach((button, index) => {
+    const isActive = index === pageIndex;
+    button.dataset.active = isActive ? "true" : "false";
+    setButtonActiveState(button, isActive);
+  });
+}
+
+pageButtons.forEach((button, index) => {
+  button.addEventListener("click", () => activatePageByIndex(index));
+});
+
+if (previousButton) {
+  previousButton.addEventListener("click", () => {
+    const currentPage = getCurrentPage();
+    if (currentPage > 0) {
+      activatePageByIndex(currentPage - 1);
+    }
+  });
+}
+
+if (nextButton) {
+  nextButton.addEventListener("click", () => {
+    const currentPage = getCurrentPage();
+    if (currentPage < pageButtons.length - 1) {
+      activatePageByIndex(currentPage + 1);
+    }
+  });
+}
+
+activatePageByIndex(0);
