@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body class="bg-[url('/images/image.png')] bg-no-repeat bg-cover text-white flex flex-col">
-    <main class="px-15">
+    <main class="px-[60px]">
       <!--Header-->
       <header class="bg-[url('/images/image.png')] inset-0 opacity-85 bg-no-repeat bg-cover flex py-4 justify-between items-center max-w-screen sticky px-4 rounded-b-xl z-10 top-0 right-0 left-0">
         <div>
@@ -25,9 +25,10 @@
       </header>
 
       <!--Section-->
-      <section class="flex grow gap-x-4 py-4">
-        <div class="flex flex-col items-center">
-          <h1 class="text-3xl font-bold tracking-tighter my-8">Login</h1>
+      <section class="flex min-h-screen gap-x-4 py-4">
+        <!--Login Form-->
+        <div class="flex flex-col items-center justify-center flex-1">
+          <h1 class="text-3xl font-bold tracking-tighter my-8">Sign in</h1>
           <form>
             <!--Email-->
             <div class="flex flex-col my-2">
@@ -36,7 +37,7 @@
             </div>
 
             <!--Password-->
-            <div class="">
+            <div class="flex flex-col my-2">
               <label for="password" class="font-medium text-xl">Password</label>
               <input required type="password" name="password" id="password" placeholder="Enter your password" class="bg-white hover:bg-white/95 transition text-black placeholder:text-slate-400 rounded-md py-2 px-4 w-[min(50vw,300px)]">
             </div>
@@ -51,7 +52,7 @@
         </div>
 
         <!--3D Spline-->
-        <div class="h-screen object-cover w-full bg-gray-700">
+        <div class="min-h-screen object-cover w-full bg-slate-400/25 flex-1">
           <spline-viewer url="https://prod.spline.design/hwetFXP6B6Ydc1t1/scene.splinecode"></spline-viewer>
         </div>
       </section>

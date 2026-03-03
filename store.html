@@ -337,12 +337,10 @@
       </section>
 
       <!--Page switcher-->
-        <div class="flex gap-x-4 justify-center items-center">
-          <p class="bg-yellow-300 text-black px-2 rounded-sm font-medium cursor-pointer hover:bg-yellow-400 transition">&LessLess; Previous</p>
-          <p id="page1" class="cursor-pointer">1</p>
-          <p id="page2" class="cursor-pointer">2</p>
-          <p id="page3" class="cursor-pointer">3</p>
-          <p class="bg-yellow-300 text-black px-2 rounded-sm font-medium cursor-pointer hover:bg-yellow-400 transition">Next &GreaterGreater;</p>
+        <div id="pagination" class="flex justify-center items-center gap-4 my-8">
+          <button id="prevBtn">Prev</button>
+          <span id="pages" class="flex gap-2 text-black"></span>
+          <button id="nextBtn">Next</button>
         </div>
     </main>
     
@@ -358,7 +356,7 @@
     <script>
       AOS.init({
       // Global settings:
-      duration: 300, //values from 0 to 3000, with step 50ms
+      duration: 800, //values from 0 to 3000, with step 50ms
       once: false, // whether animation should happen only once while scrolling down
       mirror: true, // whether elements should animate out while scrolling past them
       });

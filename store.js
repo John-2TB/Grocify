@@ -1,25 +1,58 @@
-const page1 = document.getElementById("page1");
-const page2 = document.getElementById("page2");
-const page3 = document.getElementById("page3");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const pagesContainer = document.getElementById("pages");
 
-page1.style.backgroundColor = "white";
-page1.style.paddingLeft = "8px";
-page1.style.paddingRight = "8px";
-page1.style.color = "black";
-page1.style.borderRadius = "4px";
 
-page2.addEventListener("click",
-  function() {
-    page2.style.backgroundColor = "white";
-    page2.style.paddingLeft = "8px";
-    page2.style.paddingRight = "8px";
-    page2.style.color = "black";
-    page2.style.borderRadius = "4px";
+let currentPage = 1;
+const totalPages = 10;
 
-    page1.style.removeProperty(BackgroundColor)
-    page1.style.paddingLeft = "none";
-    page1.style.paddingRight = "none";
-    page1.style.color = "none";
-    page1.style.borderRadius = "none";
+function renderPagination() {
+  pagesContainer.innerHTML = "";
+
+  let startPage = currentPage;
+  if (currentPage > totalPages - 2) {
+    startPage = totalPages - 2;
   }
-);
+  if (startPage < 1) startPage = 1;
+
+  for (let i = startPage; i < startPage + 3; i++) {
+    if (i > totalPages) break;
+
+    const pageBtn = document.createElement("button");
+    pageBtn.textContent = i;
+
+    // APPLY YOUR DESIGN CLASS
+    pageBtn.classList.add("bg-transparent", "border", "border-white", "text-white", "rounded-md", "px-4", "py-2", "transition-colors", "duration-300");
+
+    // ACTIVE STATE
+    if (i === currentPage) {
+      pageBtn.classList.add("bg-white", "text-black");
+    }
+
+    pageBtn.addEventListener("click", () => {
+      currentPage = i;
+      renderPagination();
+      renderProducts();
+    });
+
+    pagesContainer.appendChild(pageBtn);
+  }
+
+  // Show/hide buttons
+  prevBtn.style.display = currentPage === 1 ? "none" : "inline-block";
+  nextBtn.style.display = currentPage === totalPages ? "none" : "inline-block";
+}
+
+prevBtn.addEventListener("click", () => {
+  currentPage--;
+  renderPagination();
+  renderProducts();
+});
+
+nextBtn.addEventListener("click", () => {
+  currentPage++;
+  renderPagination();
+  renderProducts();
+});
+
+renderPagination();

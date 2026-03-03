@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body class="bg-[url('/images/image.png')] bg-no-repeat bg-cover text-white overflow-x-hidden">
-    <main class="px-15 max-sm:px-0">
+    <main class="px-[60px] max-sm:px-0">
       <header class="bg-[url('/images/image.png')] rounded-b-xl opacity-85 bg-no-repeat bg-cover px-15 max-sm:px-4 flex py-4 max-sm:py-2 justify-between items-center max-w-screen gap-1">
         <div>
           <img src="/images/logo.svg" alt="logo" class="object-contain w-35 max-sm:w-23">
@@ -23,17 +23,22 @@
         </div>
       </header>
 
-      <section class="flex justify-between max-sm:px-4 h-screen relative mb-4">
+      <section class="flex justify-between max-sm:px-4 min-h-screen relative mb-4">
         <div class="bg-image"></div>
         <div data-aos="fade-right" class="flex flex-col justify-center h-screen">
-          <h1 class="text-white text-6xl max-sm:text-3xl font-semibold leading-20 max-sm:leading-6 tracking-tighter">
+          <h1 class="text-white text-6xl max-sm:text-3xl font-bold leading-20 max-sm:leading-6 tracking-tighter">
           Groceries<br>delivery in <span class="font-light">15 mins</span>
           </h1>
           <p class="text-gray-300 my-2 max-sm:my-1 max-sm:text-md tracking-tighter">Grocify offer a wide range of products including fresh products, meats, <br>baked goods and non-perishable items.</p>
           <!--Buttons-->
           <div class="my-7 flex items-center gap-4">
-          <a href="login.html" class="px-6 py-2.5 bg-yellow-300 hover:bg-yellow-400 transition rounded-3xl text-md font-semibold cursor-pointer max-sm:px-2">Sign Up/Login</a>
-          <a class="text-white mx-4 max-sm:mx-0 font-semibold text-md bg-black/70 hover:bg-black transition px-6 py-2.5 rounded-3xl cursor-pointer" href="store.html">
+          <button class="px-6 py-2.5 bg-yellow-300 hover:bg-yellow-400 transition rounded-3xl text-md font-semibold cursor-pointer max-sm:px-2 hover:scale-105 active:scale-95 flex justify-center items-center gap-1" id="signupBtn" window.location.href="signup.html">
+            Sign Up/Login <img src="/images/down-arrow.png" alt="down-arrow" class="h-6 inline">
+            <span class="hidden" id="loginText">
+              <a href="login.html">Login</a>
+            </span>
+          </button>
+          <a class="text-white mx-4 max-sm:mx-0 font-semibold text-md bg-black/70 hover:bg-black transition px-6 py-2.5 rounded-3xl cursor-pointer hover:scale-105 active:scale-95" href="store.html">
             Visit Store 
             <img src="/images/shopping-cart.png" alt="shopping-cart" class="h-5 inline">
           </a>
@@ -43,7 +48,7 @@
         <div data-aos="fade-left" class="max-sm:hidden">
           <div>
             <div>
-            <img src="/images/grocery-image.png" alt="" class="h-screen object-cover">
+            <img src="/images/grocery-image.png" alt="" class="max-h-screen object-cover">
           </div>
           </div>
         </div>
@@ -68,6 +73,6 @@
       mirror: true, // whether elements should animate out while scrolling past them
       });
     </script>
-
+    <script src="index.js"></script>
   </body>
 </html>

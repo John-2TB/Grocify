@@ -22,7 +22,7 @@
   }
 
   .odd-grid-display{
-    @apply border border-yellow-300 hover:border-white rounded-xl px-4 py-4 flex flex-col transform hover:scale-105 transition duration-500 hover:shadow-white/25 shadow-md shadow-yellow-300 max-sm:border max-sm:px-2 max-sm:py-2 max-sm:rounded-xl max-sm:border-yellow-300 max-sm:shadow-yellow-300
+    @apply border border-yellow-300 hover:border-white rounded-xl px-4 py-4 flex flex-col transform hover:scale-105 transition duration-500 hover:shadow-white/25 shadow-md shadow-yellow-300 max-sm:border max-sm:px-2 max-sm:py-2 max-sm:rounded-xl max-sm:border-yellow-300 max-sm:shadow-yellow-300 
   }
 
   .even-grid-display{
@@ -32,6 +32,7 @@
   .bg-image{
     @apply absolute inset-0 before:content-[''] before:absolute before:inset-0 max-sm:before:bg-[url('/images/grocery-image.png')] before:bg-cover before:bg-center before:opacity-50;
   }
+
 
   
 }
