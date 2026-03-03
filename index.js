@@ -21,4 +21,4 @@ signupBtn.addEventListener('click', function() {
     isLoginVisible = false;
 
   }
-})
+});

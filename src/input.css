@@ -34,7 +34,7 @@
   }
 
   .btn-style{
-    @apply px-6 py-2.5 bg-yellow-300 hover:bg-yellow-400 transition rounded-3xl text-md font-semibold cursor-pointer max-sm:px-2 hover:scale-105 active:scale-95 flex flex-col justify-center items-center gap-1
+    @apply px-6 py-2.5 bg-yellow-300 hover:bg-yellow-400 transition rounded-3xl font-semibold cursor-pointer max-sm:px-2 hover:scale-105 active:scale-95 flex flex-col justify-center items-center gap-1
   }
   
 }
