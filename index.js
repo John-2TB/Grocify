@@ -8,5 +8,7 @@ signupBtn.addEventListener('click', function() {
   } else {
     loginText.classList.add('hidden');
     signupBtn.textContent = 'Sign Up/Login';
+    signupBtn.appendChild(document.createElement('img')).setAttribute('src', '/images/down-arrow.png');
+    signupBtn.querySelector('img').classList.add('h-6', 'inline');
   }
 })
