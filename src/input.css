@@ -33,6 +33,8 @@
     @apply absolute inset-0 before:content-[''] before:absolute before:inset-0 max-sm:before:bg-[url('/images/grocery-image.png')] before:bg-cover before:bg-center before:opacity-50;
   }
 
-
+  .btn-style{
+    @apply px-6 py-2.5 bg-yellow-300 hover:bg-yellow-400 transition rounded-3xl text-md font-semibold cursor-pointer max-sm:px-2 hover:scale-105 active:scale-95 flex flex-col justify-center items-center gap-1
+  }
   
 }

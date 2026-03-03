@@ -32,12 +32,14 @@
           <p class="text-gray-300 my-2 max-sm:my-1 max-sm:text-md tracking-tighter">Grocify offer a wide range of products including fresh products, meats, <br>baked goods and non-perishable items.</p>
           <!--Buttons-->
           <div class="my-7 flex items-center gap-4">
-          <button class="px-6 py-2.5 bg-yellow-300 hover:bg-yellow-400 transition rounded-3xl text-md font-semibold cursor-pointer max-sm:px-2 hover:scale-105 active:scale-95 flex justify-center items-center gap-1" id="signupBtn" window.location.href="signup.html">
-            Sign Up/Login <img src="/images/down-arrow.png" alt="down-arrow" class="h-6 inline">
-            <span class="hidden" id="loginText">
-              <a href="login.html">Login</a>
-            </span>
-          </button>
+            <div class="flex flex-col gap-2">
+              <a id="signupBtn" class="px-6 py-2.5 bg-yellow-300 hover:bg-yellow-400 transition rounded-3xl text-md font-semibold cursor-pointer max-sm:px-2 hover:scale-105 active:scale-95 flex justify-center items-center gap-1">
+                Sign Up/Login <img id="arrow-icon" src="/images/down-arrow.png" alt="down-arrow" class="h-6 inline">
+              </a>
+              <a href="login.html" id="loginText" class="px-6 py-2.5 bg-yellow-300 hover:bg-yellow-400 transition rounded-3xl text-md font-semibold cursor-pointer max-sm:px-2 hover:scale-105 active:scale-95 hidden">Login</a>
+            </div>
+          
+            
           <a class="text-white mx-4 max-sm:mx-0 font-semibold text-md bg-black/70 hover:bg-black transition px-6 py-2.5 rounded-3xl cursor-pointer hover:scale-105 active:scale-95" href="store.html">
             Visit Store 
             <img src="/images/shopping-cart.png" alt="shopping-cart" class="h-5 inline">
