@@ -4,18 +4,21 @@ const confirmPassword = document.getElementById("confirmPassword");
 const signupBtn = document.getElementById("signupBtn");
 const passwordReport = document.getElementById("passwordReport");
 
-signupBtn.addEventListener("click", function() {
+passwordReport.classList.add("text-red-600")
+
+signupBtn.addEventListener("click", function(e) {
+  e.preventDefault();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const confirmPasswordValue = confirmPassword.value.trim();
 
   if (passwordValue !== confirmPasswordValue) {
     passwordReport.textContent = "Password don't match. Please try again";
-    passwordReport.classList.add("text-red-600")
-  } if (passwordValue.length !== 8) {
-    passwordReport
-  } else {
     
+  } if (passwordValue.length < 8) {
+    passwordReport.textContent = "Password must at least contain 8 characters"
+  } else {
+    window.location.href = ""
   }
 
-})
+});
