@@ -1,27 +1,32 @@
-const login = document.getElementById("login")
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const login = document.getElementById('login');
+const loginReport = document.getElementById('loginReport');
 
-const user = [];
+loginReport.classList.add("text-red-600");
 
+login.addEventListener('click', function(e) {
+  e.preventDefault();
 
+  const emailValue = email.value.trim();
+  const passwordValue = password.value.trim();
 
-login.addEventListener("click",
-  function() {
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
+  const storedData = localStorage.getItem('user');
+  const user = JSON.parse(storedData);
 
-    const email = emailInput.value;
-    const password = passwordInput.value;
-
-    const userLoginDetails = {
-      userEmail: email,
-      userPassword: password
-    };
-
-    user.push(userLoginDetails);
-
-    localStorage.setItem("registeredUsers", JSON.stringify(user));
-
-    console.log(JSON.parse("registeredUsers"));
-
+  if (!storedData) {
+    loginReport.textContent = "User not found. Please sign up."
+    return;
   }
-);
+
+  if (emailValue === user.email && passwordValue === user.password) {
+    loginReport = "";
+    window.location.href = "landingpage.html"
+    localStorage.setItem("isLoggedIn", "true")
+  } else {
+    loginReport.textContent = "Invalid email or password";
+  }
+});
+
+
+

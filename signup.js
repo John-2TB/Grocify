@@ -5,8 +5,6 @@ const confirmPassword = document.getElementById("confirmPassword");
 const signupBtn = document.getElementById("signupBtn");
 const passwordReport = document.getElementById("passwordReport");
 
-const nameInputValue = nameInput.value()
-
 passwordReport.classList.add("text-red-600")
 
 signupBtn.addEventListener("click", function(e) {
@@ -14,6 +12,7 @@ signupBtn.addEventListener("click", function(e) {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
   const confirmPasswordValue = confirmPassword.value.trim();
+  const nameInputValue = nameInput.value.trim();
 
   if (passwordValue !== confirmPasswordValue) {
     passwordReport.textContent = "Password don't match. Please try again.";
