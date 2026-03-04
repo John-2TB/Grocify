@@ -12,15 +12,16 @@ login.addEventListener('click', function(e) {
   const passwordValue = password.value.trim();
 
   const storedData = localStorage.getItem('user');
-  const user = JSON.parse(storedData);
-
+  
   if (!storedData) {
     loginReport.textContent = "User not found. Please sign up."
     return;
   }
 
+  const user = JSON.parse(storedData);
+
   if (emailValue === user.email && passwordValue === user.password) {
-    loginReport = "";
+    loginReport.textContent = "";
     window.location.href = "landingpage.html"
     localStorage.setItem("isLoggedIn", "true")
   } else {
