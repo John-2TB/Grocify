@@ -6,6 +6,8 @@
   /* In your CSS file (e.g., input.css) */
 body {
   background-image: url('/images/Image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @layer components {
