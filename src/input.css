@@ -3,6 +3,10 @@
 @theme {
 
 }
+  /* In your CSS file (e.g., input.css) */
+body {
+  background-image: url('/images/Image.png');
+}
 
 @layer components {
   .link {
