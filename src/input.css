@@ -10,6 +10,10 @@ body {
   background-size: cover;
 }
 
+.bg-hero {
+  background-image: url('/images/image.png');
+}
+
 @layer components {
   .link {
     @apply transition hover:text-gray-200
